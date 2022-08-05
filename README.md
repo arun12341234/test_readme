@@ -1,133 +1,44 @@
-# Word Editor
+# GUI Operations
 
-***Word Editor with this plug-in can be read and modify the docx file header, footer, table, and paragraph.***
+***This plugin that works across Windows, MacOS X and Linux which provides the ability to simulate mouse cursor moves and Some Message box..***
 
 
-## Word Editor
-| Item         |          Value           |
-|--------------|:------------------------:|
-| Icon         | ![Word Editor](icon.png) |
-| Display Name |     **Word Editor**      |
 
-### Arun Kumar (arunk@argos-labs.com)
+## Numerical Basic Operations
+Item | Value
+---|:---:
+Icon | ![GUI Operations](icon.png) 
+Display Name | **GUI Operations**
 
-Arun Kumar
-* [email](mailto:arunk@argos-labs.com) 
+## Name of the author (Contact info of the author)
+
+Pavan K
+* [email](mailto:pvnpavank@argos-labs.com) 
  
 ## Version Control 
-* [4.728.1004](setup.yaml)
-* Release Date: `July 30, 2022`
+* [4.503.1000](setup.yaml)
+* Release Date: `May 03, 2022`
 
 ## Input (Required)
-| OP Type            | Parameters      | Output                         |
-|--------------------|-----------------|--------------------------------|
-| Read Header        |                 | p_id,paragraph                 |
-| <br>               |                 |                                |
-| Read Header        | Run             | p_id,r_id,paragraph            |
-| <br>               |                 |                                |
-| Update Header      | Paragraph Index | Updated file path              |
-|                    | Paragraph Value |                                |
-| Update Header      | Paragraph Index | Updated file path              |
-|                    | Paragraph Value |                                |
-|                    | Output Path     |                                |
-| Update Header      | Paragraph Index | Updated file path              |
-|                    | Run Index       |                                |
-|                    | Paragraph Value |                                |
-| Update Header      | Paragraph Index | Updated file path              |
-|                    | Run Index       |                                |
-|                    | Paragraph Value |                                |
-|                    | Output Path     |                                |
-| Read Paragraphs    |                 | p_id,paragraph                 |
-| <br>               |                 |                                |
-| Read Paragraphs    | Run             | p_id,r_id,paragraph            |
-| <br>               |                 |                                |
-| Update Paragraphs  | Paragraph Index | Updated file path              |
-|                    | Paragraph Value |                                |
-| Update Paragraphs  | Paragraph Index | Updated file path              |
-|                    | Paragraph Value |                                |
-|                    | Output Path     |                                |
-| Update Paragraphs  | Paragraph Index | Updated file path              |
-|                    | Run Index       |                                |
-|                    | Paragraph Value |                                |
-| Update Paragraphs  | Paragraph Index | Updated file path              |
-|                    | Run Index       |                                |
-|                    | Paragraph Value |                                |
-|                    | Output Path     |                                |
-| Read Table         | Table Index     | row_id,cell_id,value           |
-| <br>               |                 |                                |
-| Read Table         | Table Index     | row_id,cell_id,value           |
-|                    | Row Index       |                                |
-| Read Table         | Table Index     | row_id,cell_id,value           |
-|                    | Row Index       |                                |
-|                    | Cell Index      |                                |
-| Read Table         | Table Index     | row_id,cell_id,p_id,r_id,value |
-|                    | Row Index       |                                |
-|                    | Cell Index      |                                |
-|                    | Run             |                                |
-| Update Table Rows  | Table Index     | Updated file path              |
-|                    | Row Index       |                                |
-|                    | Cell Index      |                                |
-|                    | Row Cell Value  |                                |
-| Update Table Rows  | Table Index     | Updated file path              |
-|                    | Row Index       |                                |
-|                    | Cell Index      |                                |
-|                    | Row Cell Value  |                                |
-|                    | Output Path     |                                |
-| Update Table Rows  | Table Index     | Updated file path              |
-|                    | Row Index       |                                |
-|                    | Cell Index      |                                |
-|                    | Paragraph Index |                                |
-|                    | Run Index       |                                |
-|                    | Row Cell Value  |                                |
-| Update  Table Rows | Table Index     | Updated file path              |
-|                    | Row Index       |                                |
-|                    | Cell Index      |                                |
-|                    | Paragraph Index |                                |
-|                    | Run Index       |                                |
-|                    | Row Cell Value  |                                |
-|                    | Output Path     |                                |
-| Read Footer        |                 | p_id,paragraph                 |
-| <br>               |                 |                                |
-| Read Footer        | Run             | p_id,r_id,paragraph            |
-| <br>               |                 |                                |
-| Update Footer      | Paragraph Index | Updated file path              |
-|                    | Paragraph Value |                                |
-| Update Footer      | Paragraph Index | Updated file path              |
-|                    | Paragraph Value |                                |
-|                    | Output Path     |                                |
-| Update Footer      | Paragraph Index | Updated file path              |
-|                    | Run Index       |                                |
-|                    | Paragraph Value |                                |
-| Update Footer      | Paragraph Index | Updated file path              |
-|                    | Run Index       |                                |
-|                    | Paragraph Value |                                |
-|                    | Output Path     |                                |
-
-### Notes:-
-<ul>
-    <li>p_id has information about Paragraph Index.</li>
-    <li>r_id has information about Run Index.</li>
-    <li>Run Index treated as sub-paragraph.</li>
-    <li>row_id has information about Row Index.</li>
-    <li>cell_id has information about Cell Index.</li>
-    <li>Cell Index treated as sub-row.</li>
-    <li>Output Path is an optional parameter to store an updated file, in case of no not being selected default updated file will store in the same location as the docx file.</li>
-    <li>In case of empty Run Index put it as None. </li>
-</ul>
-
+Display Name | Selection | Default Value | Description| Input| Output
+---|---|---|---|---|---
+Operation |Screen Size |Screen Size |  Get the size of the primary monitor or display.|*None*|(1366,766)| 
+ &nbsp;|Alert|&nbsp;|Displays a simple message box with text and a single OK button. Returns the text of the button clicked on. | message='Sample Message' |![Alert Box](README_alert.jpg)|
+&nbsp;|Confirm Prompt |&nbsp;|Displays a message box with OK and Cancel buttons. Number and text of buttons can be customized. Returns the text of the button clicked on. | title='Test Title' </br>message='Sample Message'|![Confirm Box](README_confirm.jpg)|  
+&nbsp;|Vertical Scroll |&nbsp;|The mouse scroll wheel can be simulated by calling the scroll() function and passing an integer number of “clicks” to scroll. The amount of scrolling in a “click” varies between platforms. Optionally, integers can be passed for the the x and y keyword arguments to move the mouse cursor before performing the scroll. | lines= 50 </br>lines= -50|positive input  # scroll up 50 "clicks" and negative input  #scroll down 50 "clicks"| 
+&nbsp;|Horizontal Scroll |&nbsp;|On only OS X and Linux platforms, Horizontal scroll will works and passing an integer number of “clicks” to scroll. The amount of scrolling in a “click” varies between platforms. Optionally, integers can be passed for the the x and y keyword arguments to move the mouse cursor before performing the scroll. | lines= 50 </br>lines= -50|positive input  # scroll right 50 "clicks and negative input  #scroll left 50 "clicks|  
 ## Return Value
 
 ### Normal Case
-Description of the output result
+Description of output result
 
 ## Return Code
-| Code | Meaning                      |
-|------|------------------------------|
-| 0    | Success                      |
-| 1    | Failure (Invalid Input Type) |
-| 99   | Exceptional case             |
+Code | Meaning
+---|---
+0 | Success
+99 | Exceptional case
 
-## Output Format
+##Output Format
 You may choose one of 3 output formats below,
 
 <ul>
@@ -136,43 +47,4 @@ You may choose one of 3 output formats below,
   <li>File</li>
 </ul>  
 
-
-## Parameter setting examples (diagrams)
-
-## Operations
-
-### Sample Docx File:
-
-[Word Editor Input Data](sample.docx)
-
-### Read Header:
-
-![Word Editor Input Data](WE_1.png)
-
-### Read Header with Run:
-
-![Word Editor Input Data](WE_2.png)
-
-### Read Paragraphs:
-
-![Word Editor Input Data](WE_3.png)
-
-### Read Paragraphs with Run:
-
-![Word Editor Input Data](WE_4.png)
-
-### Read Table:
-
-![Word Editor Input Data](WE_5.png)
-
-### Update Paragraphs:
-
-![Word Editor Input Data](WE_7.png)
-
-### Update Table:
-
-![Word Editor Input Data](WE_8.png)
-
-### Update Table with Run:
-
-![Word Editor Input Data](WE_9.png)
+ 
