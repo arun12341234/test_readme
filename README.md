@@ -15,17 +15,24 @@ Arun Kumar
 * [email](mailto:arunk@argos-labs.com) 
  
 ## Version Control 
-* [4.829.1100](setup.yaml)
+* [4.829.1404](setup.yaml)
 * Release Date: `August 29, 2022`
 
 ## Input (Required)
-| Parameters               | Output                   |
-|--------------------------|--------------------------|
-| CMD Line                 | Control Identifiers:     |
-| Title                    |                          |
-| CMD Line                 | Control Identifier Value |
-| Title                    |                          |
-| Control Identifier Name  |                          |
+| Function type                  | Parameters              | Output                   |
+|--------------------------------|-------------------------|--------------------------|
+| Print Control Identifiers      | Title                   | Control Identifiers:     |
+| Get Control Identifiers Value  | Title                   | Control Identifier Value |
+|                                | Control Identifier Name |                          |
+| Print Control Identifiers      | CMD Line                | Control Identifiers:     |
+|                                | Title                   |                          |
+| Get Control Identifiers Value  | CMD Line                | Control Identifier Value |
+|                                | Title                   |                          |
+|                                | Control Identifier Name |                          |
+
+Note :-
+
+1. If required window interface already running skip CMD Line option.
 
 
 :warning: **If Control Identifier Value already has comma separated**: deal it separately!
@@ -66,3 +73,12 @@ You may choose one of 3 output formats below,
 
 ![Win UI Op Input Data](README_2.png)
 
+
+###  Print Control Identifiers already running window:
+
+![Win UI Op Input Data](README_3.png)
+
+
+### Print Control Identifiers Value already running window:
+
+![Win UI Op Input Data](README_4.png)
