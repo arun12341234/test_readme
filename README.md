@@ -21,19 +21,23 @@ Arun Kumar
 ## Input (Required)
 | Function type                  | Parameters              | Output                   |
 |--------------------------------|-------------------------|--------------------------|
-| Print Control Identifiers      | Title                   | Control Identifiers:     |
-| Get Control Identifiers Value  | Title                   | Control Identifier Value |
+| Print Control Identifiers      | uia or win32            | Control Identifiers:     |
+|                                | Title                   |                          |
+| Get Control Identifiers Value  | uia or win32            | Control Identifier Value |
+|                                | Title                   |                          |
 |                                | Control Identifier Name |                          |
-| Print Control Identifiers      | CMD Line                | Control Identifiers:     |
+| Print Control Identifiers      | uia or win32            | Control Identifiers:     |
 |                                | Title                   |                          |
-| Get Control Identifiers Value  | CMD Line                | Control Identifier Value |
+|                                | CMD Line                |                          |
+| Get Control Identifiers Value  | uia or win32            | Control Identifier Value |
 |                                | Title                   |                          |
+|                                | CMD Line                |                          |
 |                                | Control Identifier Name |                          |
 
-Note :-
+Note:-
 
 1. If required window interface already running skip CMD Line option.
-
+2. win32 (Win32 API) & uia (MS UI Automation) pick one according to Interface.
 
 :warning: **If Control Identifier Value already has comma separated**: deal it separately!
 
